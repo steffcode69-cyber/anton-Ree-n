@@ -92,17 +92,15 @@ export function RainfallStats({ readings }: RainfallStatsProps) {
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <Card key={stat.title} className="shadow-md border-0 overflow-hidden">
+          <Card key={stat.title}>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 {stat.title}
               </CardTitle>
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
-                <stat.icon className="h-4 w-4 text-primary" />
-              </div>
+              <stat.icon className="h-4 w-4 text-sky-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">
+              <div className="text-2xl font-bold">
                 {stat.value}
                 <span className="ml-1 text-sm font-normal text-muted-foreground">
                   {unit}

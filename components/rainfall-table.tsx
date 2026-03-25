@@ -46,14 +46,12 @@ export function RainfallTable({ readings, isAdmin }: RainfallTableProps) {
   }
 
   return (
-    <Card className="shadow-md border-0">
+    <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
-                <Droplets className="h-4 w-4 text-primary" />
-              </div>
+              <Droplets className="h-5 w-5 text-sky-500" />
               Recent Readings
             </CardTitle>
             <CardDescription>

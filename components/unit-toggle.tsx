@@ -10,20 +10,20 @@ interface UnitToggleProps {
 
 export function UnitToggle({ unit, onUnitChange }: UnitToggleProps) {
   return (
-    <div className="flex items-center gap-1 rounded-lg border border-primary/20 bg-card p-1 shadow-sm">
+    <div className="flex items-center gap-1 rounded-lg border bg-muted p-1">
       <Button
-        variant="ghost"
+        variant={unit === 'mm' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => onUnitChange('mm')}
-        className={`h-7 px-3 text-xs ${unit === 'mm' ? 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground' : 'hover:bg-primary/10'}`}
+        className="h-7 px-3 text-xs"
       >
         mm
       </Button>
       <Button
-        variant="ghost"
+        variant={unit === 'in' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => onUnitChange('in')}
-        className={`h-7 px-3 text-xs ${unit === 'in' ? 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground' : 'hover:bg-primary/10'}`}
+        className="h-7 px-3 text-xs"
       >
         in
       </Button>
